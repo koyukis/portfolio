@@ -154,6 +154,15 @@ body{
 		padding:0 15px 0 0;/* 線の下の説明文の右側の空白 */
 	}
 
+	.btn-img{
+		border-style:none;
+	}
+
+	.btn-img:hover{
+		opacity:0.8;
+		transition:0.8s;
+	}
+
 	.about-left{
 		/* Aboutの名前のところ */
 		margin:0 0 0 20px;
