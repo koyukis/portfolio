@@ -1,5 +1,215 @@
+:root {
+	/* サイトで使用するカラー */
+	--baseColor: #FDE9DE;
+	--mainColor: #231815;
+	--accentColor: #FFFFFF;
+}
+
 * {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 }
+
+html,
+body{
+	background-color: var(--baseColor);
+	font-family: "游明朝体";
+	color: var(--mainColor);
+	line-height: 1.6;/* 行間 */
+}
+
+.t-font{
+	font-family: "ヒラギノ明朝";
+	font-weight: 400;
+}
+
+.h-font{
+	font-family:"Source Serif Variable";
+	/* font-weight: 400; */
+}
+
+.txt-h{
+	font-size: 30px;
+}
+.txt-hh2{
+	font-size:18px;
+}
+.txt-formal{
+	font-size:12px;
+}
+
+.txt-middle{
+	/* width:100%; */
+	text-align:center;
+}
+
+.txt-left{
+	text-align:left;
+}
+
+/* ヘッダー */
+.header {
+	background-color: rgba(253,233,222,0.5);
+	width: 100%;
+	height: 80px;
+	position: fixed;
+	z-index: 3;/* 重なり */
+}
+.header-content-wrapper {
+	max-width: 1040px;
+	width:50%;/* コンテンツの横幅は全体の５０％ */
+	height: 100%;/* コンテンツの縦幅は全体の１００％ */
+	display: flex;
+	align-items: center;/* 横向きに並んだものを真ん中に揃える */
+	/* text-align:right; */
+	margin-left: 50%;/* 全体の半分を空白にしてからコンテンツをならべる */
+}
+
+.header-nav {
+	display: flex;
+	justify-content: space-around;/* 水平方向の揃え間隔をあける */
+	width: 100%;/* コンテンツ内で１００％ */
+	display: flex;
+	list-style: none;/* リスト特有の・をなくす */
+	border-bottom:5px solid var(--accentColor);
+	/* padding-left:50px; */
+}
+.header-nav a{/* ヘッダー内のaのデザイン */
+	color:var(--mainColor);
+	text-decoration: none;/* リンク特有の下線をなくす */
+}
+
+
+	.black{/* Aboutの黒箱 */
+		margin: auto;
+		margin-bottom:70px;
+		background-color:var(--mainColor);
+		width:70%;
+		height:40vw;
+
+
+	}
+
+	.black-content-wrapper{
+		/* width:50%;
+		height:100%;
+		display: flex;
+		margin-left:20px;
+		text-align:right; */
+		float:right;/* 要素を右側に寄せる */
+		margin-right:10vw;
+		padding:0px 0px 0px 30px;
+		line-height: 1.6;
+	}
+
+	.rright{/* スキル画像を右寄せ */
+		clear:both;
+		float:right;
+		margin-right:10vw;
+	}
+
+	/* .mini-middle{
+		margin:0 auto;
+	} */
+
+	.container{/* 作品一列分 */
+		display:flex;
+		flex-wrap:wrap;
+		justify-content:space-around;
+	}
+
+	.item{/* 作品３つ */
+		width:30%;
+		text-align:center;
+	}
+
+	.sidebyside{/* スキルの文字と画像を並べようとした */
+		display:inline-block;
+		vertical-align:top;
+	}
+
+	.shiro-txt{/* 白い文字の色 */
+		color:var(--accentColor);
+	}
+	.white-box{/* 作品のキャプション */
+		margin:auto ;/* 白箱の左側に空白 */
+		margin-top:20px;
+		margin-bottom:60px;
+		border:0.5px solid var(--mainColor);/* 枠線 */
+		/* background-color:var(--accentColor) ; */
+		background-color: rgba(255,255,255,0.8);/* 透明度入れた箱の色 */
+		width: 50%;/* 箱は全体の5０％ */
+		padding:0px 0px 25px 15px;/* 箱内の空白下と左 */
+
+	}
+	.border-black{
+		text-align:left;
+		padding:15px 15px 0px 0px;/* 題名下線の空白上と右（題名分） */
+		border-bottom:2px solid var(--mainColor);
+	}
+
+	.setsumei{
+		text-align:left;
+		padding:0 15px 0 0;/* 線の下の説明文の右側の空白 */
+	}
+
+	.about-left{
+		/* Aboutの名前のところ */
+		margin:0 0 0 20px;
+		float:left;
+		margin-left:10vw;/* 左の空白 */
+		/* width:50%; */
+	}
+
+	.ue{/* works about contact上の余白 */
+		padding-top:30px;
+	}
+
+	.imgs{/* 作品サムネサイズ */
+		width:100%;
+	}
+	.skills{/* スキル画像サイズ */
+		width:30%;
+	}
+
+
+
+main{
+	padding-top:80px;/* ヘッダー分和えに空白を開ける */
+}
+
+.paper{/* 紙サイズ */
+	width:70%;
+}
+
+
+.input-txt{/* inout上文字をinputの左に揃える */
+	width:50vw;
+	text-align:left;
+	margin-left:25%;
+}
+.input-de{
+	width:50vw;/* input書き込み欄 */
+}
+
+/* .input-des{
+	hight:150px;
+} */
+
+/* .mar-bottom{
+	margin-bottom:70px;
+} */
+
+.example{/* 紙画像 */
+	position:relative;
+}
+
+.example-p{/* 紙の上に乗る文字たち */
+	width: 100%;
+	position:absolute;
+	top:0;
+	/* text-align:center; */
+	margin:0 auto;
+}
+
