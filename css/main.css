@@ -86,7 +86,7 @@ body{
 		margin-bottom:70px;
 		background-color:var(--mainColor);
 		width:70%;
-		height:40vw;
+		/* height:40vw; */
 
 
 	}
@@ -118,10 +118,45 @@ body{
 		flex-wrap:wrap;
 		justify-content:space-around;
 	}
-
+	.container2{/*足跡らへん */
+		display:flex;
+		flex-wrap:wrap;
+		justify-content:center;
+		align-items:center;
+	}
 	.item{/* 作品３つ */
 		width:30%;
 		text-align:center;
+	}
+	.item2{/* 作品２つ */
+		width:40%;
+		text-align:center;
+	}
+	.item3{/* 作品１つ */
+		width:50%;
+		text-align:left;
+		margin-left:8%;
+	}
+	.white-box3{/* 作品のキャプション */
+		margin-left:auto ;/* 白箱の左側に空白 */
+		margin-right:8%;
+		margin-bottom:50px;
+		border:0.5px solid var(--mainColor);/* 枠線 */
+		/* background-color:var(--accentColor) ; */
+		background-color: rgba(255,255,255,0.8);/* 透明度入れた箱の色 */
+		width: 30%;/* 箱は全体の5０％ */
+		padding:20px 0px 25px 15px;/* 箱内の空白下と左 */
+	}
+
+	.once{/* 作品一つの横にキャプション */
+		display:flex;
+		justify-content:space-around;
+		align-items:flex-end;
+	}
+
+	.ashi{/* 足跡の画像のサイズと中央寄せ */
+		width:20%;
+		align-items:center;
 	}
 
 	.sidebyside{/* スキルの文字と画像を並べようとした */
@@ -140,18 +175,18 @@ body{
 		/* background-color:var(--accentColor) ; */
 		background-color: rgba(255,255,255,0.8);/* 透明度入れた箱の色 */
 		width: 50%;/* 箱は全体の5０％ */
-		padding:0px 0px 25px 15px;/* 箱内の空白下と左 */
+		padding:20px 0px 25px 20px;/* 箱内の空白下と左 */
 
 	}
 	.border-black{
 		text-align:left;
-		padding:15px 15px 0px 0px;/* 題名下線の空白上と右（題名分） */
+		padding:15px 15px 10px 0px;/* 題名下線の空白上と右（題名分） */
 		border-bottom:2px solid var(--mainColor);
 	}
 
 	.setsumei{
 		text-align:left;
-		padding:0 15px 0 0;/* 線の下の説明文の右側の空白 */
+		padding:10px 20px 0 0;/* 線の下の説明文の右側の空白 */
 	}
 
 	.btn-img{
@@ -174,12 +209,19 @@ body{
 	.ue{/* works about contact上の余白 */
 		padding-top:30px;
 	}
+	.shita{/* Aboutの下の空白 */
+		padding-bottom:30px;
+	}
 
 	.imgs{/* 作品サムネサイズ */
 		width:100%;
 	}
+
 	.skills{/* スキル画像サイズ */
 		width:30%;
+	}
+	.page-imgs-nale{/* 各ページのサムネイル画像のサイズ */
+		width:70%;
 	}
 
 
