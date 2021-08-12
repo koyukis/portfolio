@@ -33,7 +33,7 @@ body{
 	font-size: 30px;
 }
 .txt-hh2{
-	font-size:18px;
+	font-size:1vw;
 }
 .txt-formal{
 	font-size:12px;
@@ -85,7 +85,7 @@ body{
 		margin: auto;
 		margin-bottom:70px;
 		background-color:var(--mainColor);
-		width:70%;
+		width:50%;
 		/* height:40vw; */
 
 
@@ -137,6 +137,13 @@ body{
 		text-align:left;
 		margin-left:8%;
 	}
+
+	.item4{/* 作品１つ */
+		width:40%;
+		text-align:right;
+		margin-right:8%;
+		margin-bottom:8%;
+	}
 	.white-box3{/* 作品のキャプション */
 		margin-left:auto ;/* 白箱の左側に空白 */
 		margin-right:8%;
@@ -145,7 +152,18 @@ body{
 		/* background-color:var(--accentColor) ; */
 		background-color: rgba(255,255,255,0.8);/* 透明度入れた箱の色 */
 		width: 30%;/* 箱は全体の5０％ */
-		padding:20px 0px 25px 15px;/* 箱内の空白下と左 */
+		padding:20px 0px 25px 20px;/* 箱内の空白下と左 */
+	}
+
+	.white-box4{/* 作品のキャプション */
+		margin-right:auto ;/* 白箱の左側に空白 */
+		margin-left:8%;
+		margin-bottom:50px;
+		border:0.5px solid var(--mainColor);/* 枠線 */
+		/* background-color:var(--accentColor) ; */
+		background-color: rgba(255,255,255,0.8);/* 透明度入れた箱の色 */
+		width: 30%;/* 箱は全体の3０％ */
+		padding:20px 0px 25px 20px;/* 箱内の空白下と左 */
 	}
 
 	.once{/* 作品一つの横にキャプション */
@@ -208,6 +226,14 @@ body{
 
 	.ue{/* works about contact上の余白 */
 		padding-top:30px;
+	}
+
+	.ttop{
+		margin-top:100px;
+	}
+
+	.ttop10{
+		margin-top:10%;
 	}
 	.shita{/* Aboutの下の空白 */
 		padding-bottom:30px;
