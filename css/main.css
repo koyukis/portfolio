@@ -1,6 +1,6 @@
 :root {
 	/* サイトで使用するカラー */
-	--baseColor: #FDE9DE;
+	--baseColor: #ABB7B0;
 	--mainColor: #231815;
 	--accentColor: #FFFFFF;
 }
@@ -29,6 +29,10 @@ body{
 	/* font-weight: 400; */
 }
 
+.txt-hh{
+	font-size: 50px;
+}
+
 .txt-h{
 	font-size: 30px;
 }
@@ -50,12 +54,13 @@ body{
 
 /* ヘッダー */
 .header {
-	background-color: rgba(253,233,222,0.5);
+	background-color: rgba(255,255,255,0.5);
 	width: 100%;
 	height: 80px;
 	position: fixed;
 	z-index: 3;/* 重なり */
 }
+/* パソコン用 */
 .header-content-wrapper {
 	max-width: 1040px;
 	width:50%;/* コンテンツの横幅は全体の５０％ */
@@ -64,70 +69,320 @@ body{
 	align-items: center;/* 横向きに並んだものを真ん中に揃える */
 	/* text-align:right; */
 	margin-left: 50%;/* 全体の半分を空白にしてからコンテンツをならべる */
+	}
+
+	.header-nav {
+		display: flex;
+		justify-content: space-around;/* 水平方向の揃え間隔をあける */
+		width: 100%;/* コンテンツ内で１００％ */
+		display: flex;
+		list-style: none;/* リスト特有の・をなくす */
+		border-bottom:5px solid var(--accentColor);
+		/* padding-left:50px; */
+	}
+	.header-nav a{/* ヘッダー内のaのデザイン */
+		color:var(--mainColor);
+		text-decoration: none;/* リンク特有の下線をなくす */
 }
 
-.header-nav {
+
+/* スマホ用 */
+/* チェックボックスは非表示に */
+.drawer-hidden {
+	display: none;
+}
+
+  /* ハンバーガーアイコンの設置スペース */
+.drawer-open {
 	display: flex;
-	justify-content: space-around;/* 水平方向の揃え間隔をあける */
+	height: 8vw;
+	width: 8vw;
+	top:20px;
+	right:7vw;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	z-index: 100;/* 重なり順を一番上に */
+	cursor: pointer;
+}
+
+  /* ハンバーガーメニューのアイコン */
+.drawer-open span,
+.drawer-open span:before,
+.drawer-open span:after {
+	content: '';
+	display: block;
+	height: 3px;
+	width: 25px;
+	border-radius: 3px;
+	background: #333;
+	transition: 0.5s;
+	position: absolute;
+}
+
+  /* 三本線のうち一番上の棒の位置調整 */
+.drawer-open span:before {
+	bottom: 8px;
+}
+
+  /* 三本線のうち一番下の棒の位置調整 */
+.drawer-open span:after {
+	top: 8px;
+}
+
+  /* アイコンがクリックされたら真ん中の線を透明にする */
+#drawer-check:checked ~ .drawer-open span {
+	background: rgba(255, 255, 255, 0);
+}
+
+  /* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+#drawer-check:checked ~ .drawer-open span::before {
+	bottom: 0;
+	transform: rotate(45deg);
+}
+
+#drawer-check:checked ~ .drawer-open span::after {
+	top: 0;
+	transform: rotate(-45deg);
+}
+
+/* メニューのデザイン*/
+.drawer-content {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 100%;/* メニューを画面の外に飛ばす */
+	z-index: 99;
+	background: #fff;
+	transition: .5s;
+}
+
+  /* アイコンがクリックされたらメニューを表示 */
+#drawer-check:checked ~ .drawer-content {
+	left: 0;/* メニューを画面に入れる */
+}
+/* ハンバーガーここまで */
+
+.header-nav2{
+	display: flex;
+	/* align-content:space-between;垂直方向の揃え間隔をあける */
+	flex-direction:column;
+	align-content:center;
+	justify-content: space-around;
+	/* justify-content: space-around; */
 	width: 100%;/* コンテンツ内で１００％ */
 	display: flex;
 	list-style: none;/* リスト特有の・をなくす */
 	border-bottom:5px solid var(--accentColor);
 	/* padding-left:50px; */
 }
-.header-nav a{/* ヘッダー内のaのデザイン */
+.header-nav2 a{/* ヘッダー内のaのデザイン */
 	color:var(--mainColor);
 	text-decoration: none;/* リンク特有の下線をなくす */
 }
 
+.header-nav2 li{
+	width:60vw;
+	padding:10vh 5vw;
+	margin: auto;
+	list-style:none;
 
-	.black{/* Aboutの黒箱 */
-		margin: auto;
-		margin-bottom:70px;
-		background-color:var(--mainColor);
-		width:50%;
-		/* height:40vw; */
+}
 
-
+@media (max-width:766px) {/* パソコン用を消す */
+	.header-content-wrapper {
+		display:none;
+	}
+	.header-nav {
+		display:none;
+	}
+	.header-nav a{
+		display:none;
 	}
 
-	.black-content-wrapper{
-		/* width:50%;
-		height:100%;
-		display: flex;
-		margin-left:20px;
-		text-align:right; */
-		float:right;/* 要素を右側に寄せる */
-		margin-right:10vw;
-		padding:0px 0px 0px 30px;
-		line-height: 1.6;
+}
+@media (min-width:767px){
+	.drawer-open{
+		display:none;
+	}
+	.drawer-open span{
+		display:none;
+	}
+	.drawer-content{
+		display:none;
+	}
+}
+/* ヘッダーここまで */
+
+
+/* トップページここから */
+
+.ue{/* works about contact上の余白 */
+	padding-top:30px;
+}
+
+/* Works */
+.imgs{/* 作品サムネサイズ */
+	width:100%;
+}
+
+
+.page-imgs-nale{/* 各ページのサムネイル画像のサイズ */
+	width:70%;
+}
+
+.white-box{/* 作品のキャプション */
+	margin:auto ;/* 白箱の左側に空白 */
+	margin-top:20px;
+	margin-bottom:60px;
+	border:0.5px solid var(--mainColor);/* 枠線 */
+	/* background-color:var(--accentColor) ; */
+	background-color: rgba(255,255,255,0.8);/* 透明度入れた箱の色 */
+	width: 270px;
+	height:150px;
+	padding:20px 0px 25px 20px;/* 箱内の空白下と左 */
+}
+
+.border-black{
+	text-align:left;
+	padding:15px 15px 10px 0px;/* 題名下線の空白上と右（題名分） */
+	border-bottom:2px solid var(--mainColor);
+}
+
+.setsumei{
+	text-align:left;
+	padding:10px 20px 0 0;/* 線の下の説明文の右側の空白 */
+}
+
+.shadow{/* white-boxのシャドウ */
+	box-shadow: 2px 3px 5px 2px rgba(0,0,0,0.2);/* 水平　垂直　ぼかし具合　広がり具合 */
+}
+
+.btn-img{/* サムネのホバー */
+	border-style:none;
+}
+
+.btn-img:hover{
+	opacity:0.8;
+	transition:0.8s;
+}
+
+.grid{/* トップページ作品陳列１：１：１ */
+	display: grid;
+	margin-left: 90px;
+	margin-right: 90px;
+	gap:10px;
+	grid-template-columns:1fr 1fr 1fr;
+}
+
+.gird-item{/* 作品３つ陳列 */
+	width:100%;
+	text-align:center;
+	margin:40px;
+}
+
+@media (max-width:766px) {/* 作品陳列　パソコン用を消す */
+	.grid{
+		grid-template-columns:1fr 1fr;
+		margin-left: 40px;
+		margin-right: 40px;
+	}
+	.white-box{
+		width:180px;
+		height:100px;
 	}
 
-	.rright{/* スキル画像を右寄せ */
-		clear:both;
-		float:right;
-		margin-right:10vw;
-	}
+}
 
-	/* .mini-middle{
-		margin:0 auto;
-	} */
+/* About */
+.black{/* Aboutの黒箱 */
+	margin: auto;
+	margin-bottom:70px;
+	background-color:var(--mainColor);
+	width:70%;
+	/* height:40vw; */
+}
 
-	.container{/* 作品一列分 */
-		display:flex;
-		flex-wrap:wrap;
-		justify-content:space-around;
-	}
-	.container2{/*足跡らへん */
-		display:flex;
-		flex-wrap:wrap;
-		justify-content:center;
-		align-items:center;
-	}
-	.item{/* 作品３つ */
-		width:30%;
-		text-align:center;
-	}
+.shiro-txt{/* 白い文字の色 */
+	color:var(--accentColor);
+}
+
+.grid2{/* About */
+	display: grid;
+	margin-left: 80px;
+	margin-right: 80px;
+	gap:20px;
+	grid-template-columns:1fr 1fr;
+}
+
+.grid2-item{
+	/* width:100%; */
+	text-align:left;
+	margin:10px 10px 60px 10px;
+}
+
+.shita{/* Aboutの下の空白 */
+	padding-bottom:10px;
+}
+
+.face{/* 顔写真 */
+	width:50%;
+	align-items:left;
+}
+
+.skills{/* スキル画像サイズ */
+	width:100%;
+}
+
+/* Contact */
+.paper{/* 紙サイズ */
+	/* width:70%; */
+	margin:auto ;/* 白箱の左側に空白 */
+	margin-top:20px;
+	margin-bottom:100px;
+	border:0.5px solid var(--mainColor);/* 枠線 */
+	/* background-color:var(--accentColor) ; */
+	background-color: rgba(255,255,255);/* 透明度入れた箱の色 */
+	width: 70%;
+	height:auto;
+	padding:20px 0px 90px 20px;/* 箱内の空白下と左 */
+}
+
+.input-txt{/* inout上文字をinputの左に揃える */
+	width:50vw;
+	text-align:left;
+	margin-left:15%;
+}
+
+.input-de{
+	width:50vw;/* input書き込み欄 */
+}
+
+/* トップページここまで */
+
+
+
+
+
+.ashi{/* 足跡の画像のサイズと中央寄せ */
+	width:20%;
+	align-items:center;
+}
+.container2{/*足跡らへん */
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:center;
+	align-items:center;
+}
+
+
+
+
+
+
+
+
 	.item2{/* 作品２つ */
 		width:40%;
 		text-align:center;
@@ -172,121 +427,21 @@ body{
 		align-items:flex-end;
 	}
 
-	.ashi{/* 足跡の画像のサイズと中央寄せ */
-		width:20%;
-		align-items:center;
-	}
 
-	.sidebyside{/* スキルの文字と画像を並べようとした */
-		display:inline-block;
-		vertical-align:top;
-	}
 
-	.shiro-txt{/* 白い文字の色 */
-		color:var(--accentColor);
-	}
-	.white-box{/* 作品のキャプション */
-		margin:auto ;/* 白箱の左側に空白 */
-		margin-top:20px;
-		margin-bottom:60px;
-		border:0.5px solid var(--mainColor);/* 枠線 */
-		/* background-color:var(--accentColor) ; */
-		background-color: rgba(255,255,255,0.8);/* 透明度入れた箱の色 */
-		width: 50%;/* 箱は全体の5０％ */
-		padding:20px 0px 25px 20px;/* 箱内の空白下と左 */
-
-	}
-	.border-black{
-		text-align:left;
-		padding:15px 15px 10px 0px;/* 題名下線の空白上と右（題名分） */
-		border-bottom:2px solid var(--mainColor);
-	}
-
-	.setsumei{
-		text-align:left;
-		padding:10px 20px 0 0;/* 線の下の説明文の右側の空白 */
-	}
-
-	.btn-img{
-		border-style:none;
-	}
-
-	.btn-img:hover{
-		opacity:0.8;
-		transition:0.8s;
-	}
-
-	.about-left{
-		/* Aboutの名前のところ */
-		margin:0 0 0 20px;
-		float:left;
-		margin-left:10vw;/* 左の空白 */
-		/* width:50%; */
-	}
-
-	.ue{/* works about contact上の余白 */
-		padding-top:30px;
-	}
-
-	.ttop{
-		margin-top:100px;
+	.top{
+		margin-top:80px;
 	}
 
 	.ttop10{
 		margin-top:10%;
 	}
-	.shita{/* Aboutの下の空白 */
-		padding-bottom:30px;
-	}
 
-	.imgs{/* 作品サムネサイズ */
-		width:100%;
-	}
 
-	.skills{/* スキル画像サイズ */
-		width:30%;
-	}
-	.page-imgs-nale{/* 各ページのサムネイル画像のサイズ */
-		width:70%;
-	}
 
 
 
 main{
 	padding-top:80px;/* ヘッダー分和えに空白を開ける */
-}
-
-.paper{/* 紙サイズ */
-	width:70%;
-}
-
-
-.input-txt{/* inout上文字をinputの左に揃える */
-	width:50vw;
-	text-align:left;
-	margin-left:25%;
-}
-.input-de{
-	width:50vw;/* input書き込み欄 */
-}
-
-/* .input-des{
-	hight:150px;
-} */
-
-/* .mar-bottom{
-	margin-bottom:70px;
-} */
-
-.example{/* 紙画像 */
-	position:relative;
-}
-
-.example-p{/* 紙の上に乗る文字たち */
-	width: 100%;
-	position:absolute;
-	top:0;
-	/* text-align:center; */
-	margin:0 auto;
 }
 
