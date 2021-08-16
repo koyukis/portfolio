@@ -36,11 +36,11 @@ body{
 .txt-h{
 	font-size: 30px;
 }
-.txt-hh2{
-	font-size:1vw;
+.txt-head{
+	font-size:20px;
 }
 .txt-formal{
-	font-size:12px;
+	font-size:18px;
 }
 
 .txt-middle{
@@ -229,6 +229,7 @@ body{
 
 
 .page-imgs-nale{/* 各ページのサムネイル画像のサイズ */
+
 	width:70%;
 }
 
@@ -260,12 +261,13 @@ body{
 }
 
 .btn-img{/* サムネのホバー */
-	border-style:none;
+	display:block;
 }
 
 .btn-img:hover{
-	opacity:0.8;
-	transition:0.8s;
+	transform:scale(1.05,1.05);
+	filter:brightness(97%);
+	transition:0.5s;
 }
 
 .grid{/* トップページ作品陳列１：１：１ */
@@ -288,9 +290,24 @@ body{
 		margin-left: 40px;
 		margin-right: 40px;
 	}
+
 	.white-box{
 		width:180px;
 		height:100px;
+		padding:10px 0px 12px 10px;
+	}
+	.border-black{
+		padding:10px 10px 6px 0px;/* 題名下線の空白上と右（題名分） */
+	}
+	.setsumei{
+		padding:5px 10px 0 0;/* 線の下の説明文の右側の空白 */
+	}
+
+	.txt-head{
+		font-size:15px;
+	}
+	.txt-formal{
+		font-size:12px;
 	}
 
 }
