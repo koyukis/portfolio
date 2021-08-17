@@ -1,6 +1,6 @@
 :root {
 	/* サイトで使用するカラー */
-	--baseColor: #ABB7B0;
+	--baseColor: #0A81A5;
 	--mainColor: #231815;
 	--accentColor: #FFFFFF;
 }
@@ -14,19 +14,25 @@
 html,
 body{
 	background-color: var(--baseColor);
-	font-family: "游明朝体";
+	font-family: "Osaka";/* 日本語 */
 	color: var(--mainColor);
 	line-height: 1.6;/* 行間 */
 }
 
-.t-font{
-	font-family: "ヒラギノ明朝";
-	font-weight: 400;
+.b-font{
+	font-family: "Arial Narrow";
+	font-weight: 700;
 }
 
-.h-font{
-	font-family:"Source Serif Variable";
-	/* font-weight: 400; */
+.bi-font{
+	font-family: "Arial Narrow";
+	font-style:italic;
+	font-weight: 700;
+}
+
+.r-font{
+	font-family:"Arial Narrow";
+	font-weight: 400;
 }
 
 .txt-hh{
@@ -36,13 +42,18 @@ body{
 .txt-h{
 	font-size: 30px;
 }
+.txt-name{
+	font-size: 30px;
+}
 .txt-head{
 	font-size:20px;
 }
 .txt-formal{
 	font-size:18px;
 }
-
+.txt-mini{
+	font-size: 15px;
+}
 .txt-middle{
 	/* width:100%; */
 	text-align:center;
@@ -54,7 +65,7 @@ body{
 
 /* ヘッダー */
 .header {
-	background-color: rgba(255,255,255,0.5);
+	background-color: rgba(255,247,223);
 	width: 100%;
 	height: 80px;
 	position: fixed;
@@ -77,7 +88,7 @@ body{
 		width: 100%;/* コンテンツ内で１００％ */
 		display: flex;
 		list-style: none;/* リスト特有の・をなくす */
-		border-bottom:5px solid var(--accentColor);
+		border-bottom:5px solid #796A56;
 		/* padding-left:50px; */
 	}
 	.header-nav a{/* ヘッダー内のaのデザイン */
@@ -219,6 +230,7 @@ body{
 /* トップページここから */
 
 .ue{/* works about contact上の余白 */
+	margin-top:80px;
 	padding-top:30px;
 }
 
@@ -228,21 +240,16 @@ body{
 }
 
 
-.page-imgs-nale{/* 各ページのサムネイル画像のサイズ */
-
-	width:70%;
-}
-
 .white-box{/* 作品のキャプション */
 	margin:auto ;/* 白箱の左側に空白 */
 	margin-top:20px;
 	margin-bottom:60px;
 	border:0.5px solid var(--mainColor);/* 枠線 */
 	/* background-color:var(--accentColor) ; */
-	background-color: rgba(255,255,255,0.8);/* 透明度入れた箱の色 */
-	width: 270px;
+	background-color: rgba(255,255,255,0.98);/* 透明度入れた箱の色 */
+	width: 250px;
 	height:150px;
-	padding:20px 0px 25px 20px;/* 箱内の空白下と左 */
+	padding:15px 0px 25px 20px;/* 箱内の空白下と左 */
 }
 
 .border-black{
@@ -265,9 +272,10 @@ body{
 }
 
 .btn-img:hover{
-	transform:scale(1.05,1.05);
-	filter:brightness(97%);
-	transition:0.5s;
+	transform:scale(1.005,1.005);
+	/* filter:brightness(97%); */
+	transform:translate(0,-10px);
+	transition:0.2s;
 }
 
 .grid{/* トップページ作品陳列１：１：１ */
@@ -278,22 +286,27 @@ body{
 	grid-template-columns:1fr 1fr 1fr;
 }
 
-.gird-item{/* 作品３つ陳列 */
+.gird-item{/* 作品陳列 */
 	width:100%;
 	text-align:center;
 	margin:40px;
 }
 
-@media (max-width:766px) {/* 作品陳列　パソコン用を消す */
+
+@media (max-width:766px){/* 作品陳列　パソコン用を消す　スマホ */
 	.grid{
-		grid-template-columns:1fr 1fr;
-		margin-left: 40px;
-		margin-right: 40px;
+		grid-template-columns:1fr;
+		margin-left: 30px;
+		margin-right: 30px;
+	}
+	.gird-item{/* 作品陳列 */
+		width:80%;
+
 	}
 
 	.white-box{
-		width:180px;
-		height:100px;
+		width:200px;
+		height:110px;
 		padding:10px 0px 12px 10px;
 	}
 	.border-black{
@@ -302,12 +315,17 @@ body{
 	.setsumei{
 		padding:5px 10px 0 0;/* 線の下の説明文の右側の空白 */
 	}
-
+	.txt-name{
+		font-size:20px;
+	}
 	.txt-head{
 		font-size:15px;
 	}
 	.txt-formal{
 		font-size:12px;
+	}
+	.txt-mini{
+		font-size: 10px;
 	}
 
 }
@@ -317,9 +335,10 @@ body{
 	margin: auto;
 	margin-bottom:70px;
 	background-color:var(--mainColor);
-	width:70%;
-	/* height:40vw; */
+	width:800px;
+	height:600px;
 }
+
 
 .shiro-txt{/* 白い文字の色 */
 	color:var(--accentColor);
@@ -343,6 +362,10 @@ body{
 	padding-bottom:10px;
 }
 
+.ue2{
+	margin-top:20px;
+}
+
 .face{/* 顔写真 */
 	width:50%;
 	align-items:left;
@@ -361,19 +384,76 @@ body{
 	border:0.5px solid var(--mainColor);/* 枠線 */
 	/* background-color:var(--accentColor) ; */
 	background-color: rgba(255,255,255);/* 透明度入れた箱の色 */
-	width: 70%;
-	height:auto;
-	padding:20px 0px 90px 20px;/* 箱内の空白下と左 */
+	width: 891px;
+	height:630px;
+	padding:20px 20px 90px 20px;/* 箱内の空白下と左 */
 }
 
 .input-txt{/* inout上文字をinputの左に揃える */
-	width:50vw;
+	width:100px;
 	text-align:left;
-	margin-left:15%;
+	margin-left:150px;
 }
 
 .input-de{
-	width:50vw;/* input書き込み欄 */
+	width:550px;/* input書き込み欄 */
+}
+
+@media (max-width:766px) {/* パソコン用を消す */
+	.txt-hh{
+		font-size: 30px;
+	}
+	.ue{/* works about contact上の余白 */
+		padding-top:10px;
+	}
+	.black{
+		width:330px;
+		height:530px;
+	}
+	.grid2{
+		grid-template-columns:1fr ;
+		gap:0;
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+	.grid2-item{
+		text-align:center;
+		margin:0px 0px 10px 0px;
+	}
+
+	.face{/* 顔写真 */
+		width:50%;
+		align-items:right;
+	}
+	.ue2{
+		margin-top:10px;
+	}
+
+.skills{/* スキル画像サイズ */
+	width:70%;
+}
+	.paper{
+		height:445px;
+		width:315px;
+	}
+	.input-txt{/* inout上文字をinputの左に揃える */
+		width:100px;
+		text-align:left;
+		margin-left:25px;
+	}
+	.input-de{
+		width:230px;/* input書き込み欄 */
+	}
+
+
+}
+
+.footer{
+	background-color: rgba(255,247,223,0.9);
+	width: 100%;
+	height: 70px;
+	position: fixed;
+
 }
 
 /* トップページここまで */
@@ -381,10 +461,97 @@ body{
 
 
 
+.page-imgs-nale{/* 各ページのサムネイル画像のサイズ */
+	width:70%;
+	margin-top:50px;
+}
+.white-box-top{
+	margin-right:auto ;
+	margin-left:auto;
+	margin-bottom:150px;
+	border:0.5px solid var(--mainColor);/* 枠線 */
+	/* background-color:var(--accentColor) ; */
+	background-color: rgba(255,255,255,0.98);/* 透明度入れた箱の色 */
+	width: 500px;/* 箱は全体の3０％ */
+	padding:20px 0px 25px 20px;/* 箱内の空白下と左 */
+}
+
+.black-name{
+	margin: auto;
+	margin-bottom:30px;
+	background-color:var(--mainColor);
+	width:150px;
+	height:25px;
+}
+
+.gridwork{/* 作品ページ作品陳列１：１：１ */
+	display: grid;
+	margin-left: 90px;
+	margin-right: 90px;
+	margin-bottom:150px;
+	gap:10px;
+	grid-template-columns:1fr 1fr;
+}
+
+.girdwork-item{/* 作品陳列 */
+	width:100%;
+	text-align:center;
+	/* margin-bottom:0px; */
+
+}
+
+
+
+.gridhalf{
+	display: grid;
+	margin-left: 90px;
+	margin-right: 90px;
+	gap:10px;
+	margin-bottom:150px;
+	grid-template-columns:1fr 1fr;
+	display: flex;
+	align-items:flex-end;
+}
+
+.gridhalf-item{
+	width:100%;
+	text-align:center;
+}
+.white-boxhalf{/* 作品のキャプション */
+	margin-left:auto ;
+	margin-right:auto;
+	/* 白箱の左側に空白 */
+	/* margin-right:8%; */
+	margin-bottom:50px;
+	border:0.5px solid var(--mainColor);/* 枠線 */
+	/* background-color:var(--accentColor) ; */
+	background-color: rgba(255,255,255,0.98);/* 透明度入れた箱の色 */
+	width: 300px;
+	padding:20px 0px 25px 20px;/* 箱内の空白下と左 */
+}
+
+.white-box-bottom{
+	margin-right:auto ;
+	margin-left:auto;
+	margin-bottom:50px;
+	border:0.5px solid var(--mainColor);/* 枠線 */
+	/* background-color:var(--accentColor) ; */
+	background-color: rgba(255,255,255,0.98);/* 透明度入れた箱の色 */
+	width: 900px;
+	padding:20px 0px 25px 20px;/* 箱内の空白下と左 */
+}
+
+
 
 .ashi{/* 足跡の画像のサイズと中央寄せ */
 	width:20%;
 	align-items:center;
+}
+.ttop10{
+	margin-top:10%;
+}
+.uunder10{
+	margin-bottom:10%;
 }
 .container2{/*足跡らへん */
 	display:flex;
@@ -393,6 +560,29 @@ body{
 	align-items:center;
 }
 
+
+@media (max-width:766px) {/* パソコン用を消す */
+	.white-box-top{
+		width:300px;
+	}
+	.gridwork{
+		grid-template-columns: 1fr;
+	}
+	.black-name{
+		width:100px;
+		height:20px;
+	}
+	.gridhalf{
+		grid-template-columns:1fr;
+		display: block;
+	}
+	.white-boxhalf{
+		width:200px;
+	}
+	.white-box-bottom{
+		width:300px;
+	}
+}
 
 
 
@@ -404,11 +594,7 @@ body{
 		width:40%;
 		text-align:center;
 	}
-	.item3{/* 作品１つ */
-		width:50%;
-		text-align:left;
-		margin-left:8%;
-	}
+
 
 	.item4{/* 作品１つ */
 		width:40%;
@@ -416,16 +602,8 @@ body{
 		margin-right:8%;
 		margin-bottom:8%;
 	}
-	.white-box3{/* 作品のキャプション */
-		margin-left:auto ;/* 白箱の左側に空白 */
-		margin-right:8%;
-		margin-bottom:50px;
-		border:0.5px solid var(--mainColor);/* 枠線 */
-		/* background-color:var(--accentColor) ; */
-		background-color: rgba(255,255,255,0.8);/* 透明度入れた箱の色 */
-		width: 30%;/* 箱は全体の5０％ */
-		padding:20px 0px 25px 20px;/* 箱内の空白下と左 */
-	}
+
+
 
 	.white-box4{/* 作品のキャプション */
 		margin-right:auto ;/* 白箱の左側に空白 */
@@ -438,11 +616,6 @@ body{
 		padding:20px 0px 25px 20px;/* 箱内の空白下と左 */
 	}
 
-	.once{/* 作品一つの横にキャプション */
-		display:flex;
-		justify-content:space-around;
-		align-items:flex-end;
-	}
 
 
 
@@ -450,10 +623,17 @@ body{
 		margin-top:80px;
 	}
 
-	.ttop10{
-		margin-top:10%;
+	.once{/* 作品一つの横にキャプション */
+		display:flex;
+		justify-content:space-around;
+		align-items:flex-end;
 	}
 
+	.item3{/* 作品１つ */
+		width:50%;
+		text-align:left;
+		margin-left:8%;
+	}
 
 
 
