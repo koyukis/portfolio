@@ -379,14 +379,13 @@ body{
 .paper{/* 紙サイズ */
 	/* width:70%; */
 	margin:auto ;/* 白箱の左側に空白 */
-	margin-top:20px;
 	margin-bottom:100px;
 	border:0.5px solid var(--mainColor);/* 枠線 */
 	/* background-color:var(--accentColor) ; */
 	background-color: rgba(255,255,255);/* 透明度入れた箱の色 */
 	width: 891px;
 	height:630px;
-	padding:20px 20px 90px 20px;/* 箱内の空白下と左 */
+	padding:0px 20px 90px 20px;/* 箱内の空白下と左 */
 }
 
 .input-txt{/* inout上文字をinputの左に揃える */
@@ -567,6 +566,8 @@ body{
 	}
 	.gridwork{
 		grid-template-columns: 1fr;
+		margin-left: 50px;
+		margin-right: 50px;
 	}
 	.black-name{
 		width:100px;
@@ -575,6 +576,8 @@ body{
 	.gridhalf{
 		grid-template-columns:1fr;
 		display: block;
+		margin-left: 50px;
+		margin-right: 50px;
 	}
 	.white-boxhalf{
 		width:200px;
