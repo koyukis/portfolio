@@ -7,6 +7,7 @@
 			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
 		/>
 		<title>KoyukiSaito Portfolio</title>
+		<link rel="icon" type="image/png" href="images/fabicon-2-13.png" sizes="32x32" />
 		<meta name="keywords" content="WAV, wav, 卓展, 卓, 卓展2021, 齋藤小薫" />
 		<meta name="description" content="齋藤小薫のポートフォリオサイト" />
 		<link rel="stylesheet" href="css/normalize.css" />
@@ -15,9 +16,16 @@
 
 	<body>
 		<header class="header">
+
 			<!-- パソコン用 -->
 			<div class="header-content-wrapper">
-					<ul class = "header-nav txt-h b-font">
+				<div class="header-nav-logo">
+					<div class="logo">
+						<a href="https://koyukis.github.io/portfolio/">
+						<img class="logo-imgs" src="images/logo-12.png" alt="ロゴ"/></a>
+					</div>
+				</div>
+					<ul class = "header-nav txt-h b-font ">
 						<li><a href="#Works">Works</a></li>
 						<li><a href="#About">About</a></li>
 						<li><a href="#Contact">Contact</a></li>
@@ -25,11 +33,17 @@
 			</div>
 			<!-- スマホ用 -->
 				<div class="drawer">
+					<div class="header-nav-logo">
+						<div class="logo">
+							<a href="https://koyukis.github.io/portfolio/"class="btn-img">
+							<img class="logo-imgs" src="images/logo-12.png" alt="ロゴ"/></a>
+						</div>
+					</div>
 					<input type="checkbox" id="drawer-check" class="drawer-hidden" >
 					<label for="drawer-check" class="drawer-open"><span></span></label>
-					<nav class="drawer-content">
-						<ul class="header-nav2 txt-hh b-font">
-							<li><a href="https://koyukis.github.io/portfolio/#Works">Works</a></li>
+					<nav class="drawer-content ">
+						<ul class="header-nav2 txt-h b-font ">
+							<li><a  href="https://koyukis.github.io/portfolio/#Works">Works</a></li>
 							<li><a href="https://koyukis.github.io/portfolio/#About">About</a></li>
 							<li><a href="https://koyukis.github.io/portfolio/#Contact">Contact</a></li>
 						</ul>
@@ -37,6 +51,8 @@
 
 		</header>
 		<main>
+			<div class="bg_pattern Cross"></div>
+
 			<!-- 作品展示 -->
 
 				<!-- <img class="imgs background" src="images/back.png" alt="壁紙"> -->
@@ -113,8 +129,8 @@
 
 			<!-- 自己紹介 -->
 			<section id="About">
-				<div class="black shiro-txt shadow">
-					<h1 class = "txt-middle ue txt-hh b-font">About</h1>
+				<div class="black shiro-txt shadow under">
+					<h1 class = "txt-middle ue txt-hh b-font ">About</h1>
 					<div class="grid2">
 						<div class ="grid2-item">
 							<h2 class="txt-name">齋藤小薫</h2>
@@ -141,22 +157,25 @@
 
 			<!-- 問い合わせ -->
 			<section id="Contact">
-				<!-- <div class ="example">
-					<img class="paper" src="images/paper.png" alt="紙"/>
-					<div class = "example-p"> -->
 					<div class="paper shadow">
-						<h1 class="txt-middle ue txt-hh b-font">Contact</h1>
-						<p　class="txt-formal txt-middle">お問い合わせ、ご意見、ご感想など受け付けております。<br/>ぜひお聞かせください。</p>
-						<form method="post" action="https://docs.google.com/spreadsheets/d/1-Fs5cBbXL-sjZU_PD-peC-J1xM3iWsADJmpOcuhyeik/edit#gid=0">
-							<p class="input-txt txt-left r-font txt-formal">name</p>
-							<input class ="input-de" name="name">
-							<p class="input-txt txt-left r-font txt-formal">email address</p>
-							<input class ="input-de" type="email" name="adress">
-							<p class="input-txt txt-left r-font txt-formal">message</p>
-							<textarea class ="input-de" name="message"></textarea>
-							<p></p>
-							<input type="submit" value="Send"><!-- type="button"enterキーでの送信を無効 -->
-						</form>
+						<h1 class="txt-middle txt-hh b-font ue">Contact</h1>
+						<div class="grid-contact">
+							<p　class="txt-formal contact-txt">お問い合わせ、ご意見、ご感想など受け付けております。<br/>ぜひお聞かせください。</p>
+							<form method="post" action="mailto:koyukoyukoyu3110@gmail.com" enctype="text/plain">
+								<p class="input-txt txt-left r-font txt-formal">name</p>
+								<input class ="input-de" name="name">
+								<p class="input-txt txt-left r-font txt-formal">email address</p>
+								<input class ="input-de" type="email" name="adress">
+								<p class="input-txt txt-left r-font txt-formal">message</p>
+								<textarea class ="input-de" name="message"></textarea>
+								<p></p>
+								<a href="#" class="btn_05"><span>send</span></a>
+							</form>
+						</div>
+
+
+							<!-- <input type="submit" value="Send"> -->
+							<!-- type="button"enterキーでの送信を無効 -->
 					</div>
 
 					<!-- </div>
