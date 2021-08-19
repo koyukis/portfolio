@@ -16,7 +16,6 @@
 
 	<body>
 		<header class="header">
-
 			<!-- パソコン用 -->
 			<div class="header-content-wrapper">
 				<div class="header-nav-logo">
@@ -51,37 +50,39 @@
 
 		</header>
 		<main>
-			<div class="bg_pattern Cross"></div>
-
+			<div id="top" class="fv">
+				<img class="imgs" src="images/fv.gif" alt="fvgif"/>
+			</div>
+			<!-- <div class="fv"></div> -->
 			<!-- 作品展示 -->
 
 				<!-- <img class="imgs background" src="images/back.png" alt="壁紙"> -->
-
+			<!-- <div class="top"> -->
 				<section id="Works">
-					<h1 class = "txt-middle txt-hh b-font">Works</h1>
+					<h1 class = "txt-middle txt-hh b-font top">Works</h1>
 					<div class ="grid">
-						<div class = "grid-item">
+						<div class = "grid-item　fadein">
 							<a href="https://koyukis.github.io/portfolio/higashiyama.html"class="btn-img">
 							<img class="imgs" src="images/i-26.png" alt="植物園サムネ"/></a>
 							<div class="white-box shadow">
 								<p class = "border-black txt-head">東山植物園サイン計画</p>
 								<p class="setsumei txt-formal r-font">Signage planning</p></div>
 						</div>
-						<div class = "grid-item">
+						<div class = "grid-item　fadein">
 							<a href="https://koyukis.github.io/portfolio/neko.html"class="btn-img">
 							<img class="imgs" src="images/i-02.png" alt="猫サムネ"/></a>
 							<div class="white-box shadow">
 								<p class = "border-black  txt-head">猫の日常</p>
 								<p class="setsumei txt-formal r-font">Programming</p></div>
 						</div>
-						<div class = "grid-item">
+						<div class = "grid-item　fadein">
 							<a href="https://koyukis.github.io/portfolio/hasami.html"class="btn-img">
 							<img class="imgs" src="images/i-03.png" alt="ハサミサムネ"/></a>
 							<div class="white-box shadow">
 								<p class = "border-black  txt-head">対戦型はさみ将棋</p>
 								<p class="setsumei txt-formal r-font">Programming</p></div>
 						</div>
-						<div class = "grid-item">
+						<div class = "grid-item　fadein">
 							<a href="https://koyukis.github.io/portfolio/bag.html"class="btn-img">
 							<img class="imgs" src="images/i-04.png" alt="COCOCHI籠サムネ"/></a>
 							<div class="white-box shadow">
@@ -89,7 +90,7 @@
 								<p class="setsumei txt-formal r-font">Textile / Goods</p>
 							</div>
 						</div>
-						<div class = "grid-item">
+						<div class = "grid-item　fadein">
 							<a href="https://koyukis.github.io/portfolio/board.html"class="btn-img">
 							<img class="imgs" src="images/i-05.png" alt="COCOCHIボードサムネ"/></a>
 							<div class="white-box shadow">
@@ -97,7 +98,7 @@
 								<p class="setsumei txt-formal r-font">Textile</p>
 							</div>
 						</div>
-						<div class = "grid-item">
+						<div class = "grid-item　fadein">
 							<a href="https://koyukis.github.io/portfolio/rikyu.html"class="btn-img">
 							<img class="imgs" src="images/i-06.png" alt="りきゅうサムネ"/></a>
 							<div class="white-box shadow">
@@ -105,7 +106,7 @@
 								<p class="setsumei txt-formal r-font">Editorial</p>
 							</div>
 						</div>
-						<div class = "grid-item">
+						<div class = "grid-item　fadein">
 							<a href="https://koyukis.github.io/portfolio/motion.html"class="btn-img">
 							<img class="imgs" src="images/i-07.png" alt="モーションサムネ"/></a>
 							<div class="white-box shadow">
@@ -113,7 +114,7 @@
 								<p class="setsumei txt-formal r-font">Animation</p>
 							</div>
 						</div>
-						<div class = "grid-item">
+						<div class = "grid-item　fadein">
 							<a href="https://koyukis.github.io/portfolio/gif.html"class="btn-img">
 							<img class="imgs" src="images/i-08.png" alt="GIFサムネ"/></a>
 							<div class="white-box shadow">
@@ -122,15 +123,16 @@
 							</div>
 						</div>
 					</div>
+				<!-- </div> -->
 
 
 
 			</section>
 
 			<!-- 自己紹介 -->
-			<section id="About">
+			<section id="About"class="top-about">
 				<div class="black shiro-txt shadow under">
-					<h1 class = "txt-middle ue txt-hh b-font ">About</h1>
+					<h1 class = "txt-middle txt-hh b-font  ue">About</h1>
 					<div class="grid2">
 						<div class ="grid2-item">
 							<h2 class="txt-name">齋藤小薫</h2>
@@ -156,28 +158,47 @@
 			</section>
 
 			<!-- 問い合わせ -->
-			<section id="Contact">
-					<div class="paper shadow">
+			<section id="Contact" class="top-contact bottom-contact">
+					<div class="under paper shadow ">
 						<h1 class="txt-middle txt-hh b-font ue">Contact</h1>
 						<div class="grid-contact">
-							<p　class="txt-formal contact-txt">お問い合わせ、ご意見、ご感想など受け付けております。<br/>ぜひお聞かせください。</p>
-							<form method="post" action="mailto:koyukoyukoyu3110@gmail.com" enctype="text/plain">
-								<p class="input-txt txt-left r-font txt-formal">name</p>
-								<input class ="input-de" name="name">
-								<p class="input-txt txt-left r-font txt-formal">email address</p>
-								<input class ="input-de" type="email" name="adress">
-								<p class="input-txt txt-left r-font txt-formal">message</p>
-								<textarea class ="input-de" name="message"></textarea>
-								<p></p>
-								<a href="#" class="btn_05"><span>send</span></a>
+							<p　class="txt-formal">お問い合わせ、ご意見、ご感想など受け付けております。<br/>ぜひお聞かせください。</p>
+							<form method="post" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdyjFCda03_qTK_wTwpITnIyjKAZtqn9pJEWucBvzzTJ4GoDQ/formResponse"
+							target="hidden_iframe" onsubmit="submitted=true;">
+								<label for="form-name" class="input-txt txt-left r-font txt-formal">name</label>
+								<p><input id="form-name" class ="input-de" name="entry.253190185" required=""></p>
+								<label for="form-mail" class="input-txt txt-left r-font txt-formal">email address</label>
+								<p><input id="form-mail" class ="input-de" type="email" name="entry.65987252" required=""></p>
+								<label for="form-detail" class="input-txt txt-left r-font txt-formal">message</label>
+								<p><textarea id="form-detail" class ="input-de" name="entry.1134915602" required=""></textarea></p>
+								<!-- <p><a href="#" class="btn_05">send</a></p> -->
+								<p><button type="submit" class="btn" name="button" value="send"><span>send</span></button></p>
+
+								<!-- <a href="#" type="submit" class="btn_05"><span>send</span></a> -->
 							</form>
+							<script type="text/javascript">var submitted = false;</script>
+							<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){window.location='result.html';}"></iframe>
+							<script>
+								jQuery(function(){
+									jQuery(window).scroll(function (){
+										jQuery('.fadein').each(function(){
+											var elemPos = jQuery(this).offset().top;
+											var scroll = jQuery(window).scrollTop();
+											var windowHeight = jQuery(window).height();
+											if (scroll > elemPos - windowHeight + 100){
+												jQuery(this).addClass('scrollin');
+											}
+										});
+									});
+								});</script>
 						</div>
+
 
 
 							<!-- <input type="submit" value="Send"> -->
 							<!-- type="button"enterキーでの送信を無効 -->
 					</div>
-
+					<p class="txt-head txt-middle r-font">©️ 2021 Koyuki Saito</p>
 					<!-- </div>
 
 				</div> -->

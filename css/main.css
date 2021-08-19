@@ -1,6 +1,6 @@
 :root {
 	/* サイトで使用するカラー */
-	--baseColor: #0A81A5;
+	--baseColor: #DBD4CE;
 	--mainColor: #231815;
 	--accentColor: #FFFFFF;
 }
@@ -11,23 +11,7 @@
 	padding: 0;
 }
 
-.bg_pattern {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 100vh;
-	background-color: var(--baseColor);
-	/* opacity: 0.4; */
-	z-index: -1;
-}
-.Cross {
-	background: radial-gradient(circle, transparent 20%, var(--baseColor) 20%, var(--baseColor) 80%, transparent 80%, transparent),
-	radial-gradient(circle, transparent 20%, var(--baseColor) 20%, var(--baseColor) 80%, transparent 80%, transparent) 50px 50px,
-	linear-gradient(#08708F 4px, transparent 4px) 0 -2px,
-	linear-gradient(90deg, #08708F 4px, var(--baseColor) 4px) -2px 0;
-	background-size: 100px 100px, 100px 100px, 50px 50px, 50px 50px;
-}
+
 html,
 body{
 	/* background-color: var(--baseColor); */
@@ -35,12 +19,40 @@ body{
 	background-size: cover;
 	width:100%;
 	height:100%;
+	font-size: 10px;
 	margin: 0;
 	padding: 0;
 	font-family: "Osaka";/* 日本語 */
 	color: var(--mainColor);
 	line-height: 1.6;/* 行間 */
+
+	background: radial-gradient(4rem,
+    rgba(255,255,255,0) 80%,
+    #778691 80%, #778691 99%,
+    rgba(255,255,255, 0)
+    ) 0 0,
+    radial-gradient(4rem,
+    rgba(255,255,255,0) 80%,
+    #778691 80%, #778691 99%,
+    rgba(255,255,255, 0)
+    ) 4em 4em,
+    radial-gradient(4.7rem,
+    rgba(255,255,255,0) 50%,
+    #B1C2B3 50%,
+    #B1C2B3 75%, #B1C2B3 99%,
+    rgba(255,255,255, 0)
+    ) 4em 4em,
+    radial-gradient(4.7rem,
+    rgba(255,255,255,0) 50%,
+    #B1C2B3 50%,
+    #DBD4CE 75%, #B1C2B3 99%,
+    rgba(255,255,255, 0)
+    ) 0 0;
+	background-size: 8rem 8rem;
+	background-color: #DBD4CE;
 }
+
+
 
 
 .b-font{
@@ -244,6 +256,12 @@ body{
 }
 
 @media (max-width:766px) {/* パソコン用を消す */
+	.fv{
+		/* width:10%; */
+		height:40vw;
+		margin-top: 30vw;
+		margin-bottom: 40vh;
+	}
 	.header-content-wrapper {
 		display:none;
 	}
@@ -274,6 +292,18 @@ body{
 .imgs{/* 作品サムネサイズ */
 	width:100%;
 }
+.fadein {
+    opacity : 0;
+    transform : translate(0, 50px);
+    transition:all 0.5s;
+	display:block;
+	margin:60px auto;
+	text-align:center;
+}
+.fadein.scrollin {
+    opacity : 1;
+    transform : translate(0, 0);
+}
 
 
 .white-box{/* 作品のキャプション */
@@ -300,7 +330,7 @@ body{
 }
 
 .shadow{/* white-boxのシャドウ */
-	box-shadow: 2px 3px 5px 2px rgba(0,0,0,0.2);/* 水平　垂直　ぼかし具合　広がり具合 */
+	box-shadow: 2px 3px 5px 2px rgba(0,0,0,0.4);/* 水平　垂直　ぼかし具合　広がり具合 */
 }
 
 .btn-img{/* サムネのホバー */
@@ -326,6 +356,11 @@ body{
 	width:100%;
 	text-align:center;
 	margin:40px;
+}
+.top{
+	display:block;
+	padding-top:100px;
+	margin-top:-80px;
 }
 
 
@@ -416,13 +451,14 @@ body{
 .paper{/* 紙サイズ */
 	/* width:70%; */
 	margin:auto ;/* 白箱の左側に空白 */
-	margin-bottom:100px;
+
 	border:0.5px solid var(--mainColor);/* 枠線 */
 	/* background-color:var(--accentColor) ; */
 	background-color: rgba(255,255,255);/* 透明度入れた箱の色 */
 	width: 891px;
 	height:630px;
-	padding:0px 20px 90px 20px;/* 箱内の空白下と左 */
+	padding:0px 20px 0px 20px;/* 箱内の空白下と左 */
+	margin-bottom:150px;
 }
 
 .contact-txt{
@@ -454,6 +490,16 @@ body{
 	/* margin:10px 10px 60px 10px; */
 }
 
+.btn{
+	width:auto;
+	padding:0 10px 0 10px;
+	height:25px;
+	display: flex;
+	justify-content: center;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
 a.btn_05 {
 	display: flex;
 	justify-content: center;
@@ -517,12 +563,32 @@ a.btn_05 span:before {
 	left: 0;
 	margin-top: -4px;
 }
+.top-about{
+	display:block;
+	padding-top:60px;
+	margin-top:100px;
+}
 
+.top-contact{
+	display:block;
+	padding-top:130px;
+	margin-top:100px;
+
+}
+.bottom-contact{
+	display: block;
+	padding-bottom: 30px;
+	margin-bottom: 100px;
+}
 @media (max-width:766px) {/* パソコン用を消す */
 	.txt-hh{
 		font-size: 30px;
 	}
 	.ue{/* works about contact上の余白 */
+		/* margin-top: 10px; */
+		padding-top:10px;
+	}
+	.top-about{
 		margin-top: 30px;
 		padding-top:10px;
 	}
@@ -722,7 +788,16 @@ a.btn_05 span:before {
 	justify-content:center;
 	align-items:center;
 }
+.pre-nex{
+	color:var(--mainColor);
+	text-decoration:none;/* リンク特有の下線をなくす */
 
+}
+.last{
+	display: block;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
 
 @media (max-width:766px) {/* パソコン用を消す */
 	.white-box-top{
@@ -759,8 +834,12 @@ a.btn_05 span:before {
 }
 
 
-	.top{
-		margin-top:80px;
+
+
+
+
+	.section{
+		border:90px 0;
 	}
 
 main{
